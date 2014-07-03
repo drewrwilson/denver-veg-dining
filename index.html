@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+	<meta property="og:title" content="Vegetarian Dining in Denver">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://drewrwilson.com/denver-veg-dining/">
+	<meta property="og:image" content="http://drewrwilson.com/denver-veg-dining/denver-veg-checklist.jpg">
+	<meta property="og:site_name" content="drewrwilson.com">
+	<meta property="og:description" content="A quick visual guide to good vegetarian dining in Denver">
+
+
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+  <!--[if lte IE 8]>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+  <![endif]-->
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+	    }
+
+    html, body {
+    	height: 100%;
+    }
+		a, a:link, a:visited, a:hover {color: #bed9ef}
+    	#map-div {
+      height: 50%;
+    }
+    li {
+    	list-style-type: none;
+    }
+    .address {
+    	font-style: italic;
+    	color: #555;
+    	font-size: 80%;
+    }
+    .phone {
+
+    }
+    .desc {
+
+    }
+    .listing-item {
+    	padding: 20px;
+    	min-height: 200px;
+    }
+    .listing-alt-bg {
+    	background: #f5f5f5;
+    }
+		.fadeout {
+    position: relative;
+    bottom: 4em;
+    height: 4em;
+    background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+
+  </style>
+  <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+
+  <script src="./denverdata.js"></script>
+</head>
+<body>
+  <div class="row" >
+		<div class="col-md-12" style="background:#2981ca;  width:100%; padding: 20px 0 40px 10%">
+<h1 style="color:#e9f2f9; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);">Vegetarian Dining in Denver, Colorado</h1>
+		</div>
+	</div>
+  <div id="map-div"></div>
+
+  <script>
+
+	function onEachFeature(feature, layer) {
+	    // does this feature have a property named Commentary?
+	    var popUpText;
+	    if (feature.properties) {
+	        popUpText = '<strong>' + feature.properties.Name + '</strong><br />' + feature.properties.Address + '<br />' + feature.properties.Commentary;
+	        if (feature.properties.Phone) {
+	        	popUpText += '<em>' + feature.properties.Phone + '</em>';
+	        }
+	        layer.bindPopup(popUpText);
+	    }
+	}
+
+ 	 var map = L.map('map-div').setView([39.7595884,-104.9608549], 12);
+
+	L.tileLayer('https://{s}.tiles.mapbox.com/v3/drewrwilson.i6935ig3/{z}/{x}/{y}.png', {
+	    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>',
+	    maxZoom: 18
+	}).addTo(map);
+
+	L.geoJson(myPointsOld, {
+    	onEachFeature: onEachFeature
+	}).addTo(map);
+
+	//initialize currentCol as 'left'
+	var currentCol = 'left';
+  </script>
+
+
+<div class="row" >
+		<div class="col-md-12" style="background:; width:100%; padding:20px 0 40px 10%;">
+			<h2 style="color:#2981ca;">Dang, look at all these good places</h2>
+			<hr />
+		</div>
+	</div>
+<div class="container">
+
+	<div class="row" id="list-of-places">
+	</div>
+</div>
+<script type="text/javascript">
+var htmlContent = '';
+var even = true;
+var count = 0;
+
+$.each(myPointsOld,
+	function(i,item) {
+		count++;
+		console.log(count);
+		if (item.properties.Name) {
+			htmlContent  = '<div class="listing-item"><h2> <i class="fa fa-map-marker"></i> ' + item.properties.Name + '</h2>';
+			if (item.properties.Address) {
+				htmlContent += '<div class="address">' + item.properties.Address
+				if (item.properties.Phone) {
+					htmlContent += ' | <span class="phone">' + item.properties.Phone + '</span>';
+				}
+				htmlContent += '</div>';
+			}
+
+			if (item.properties.Commentary) {
+				htmlContent += '<div class="desc">' + item.properties.Commentary + '</div>';
+			}
+			htmlContent = '<div class="col-sm-6 col-xs-12 col-lg-3 col-md-4">' + htmlContent + '</div><div class="fadeout"></div></div>';
+
+			if (count == 4) {
+				htmlContent += '<div class="clearfix"></div>';
+				count = 0;
+			} else if (count == 3) {
+				htmlContent += '<div class="clearfix visible-md"></div>';
+			}
+			// } else if (count % 2 === 0) {
+			// 	htmlContent += '<div class="clearfix visible-sm visible-md visible-lg"></div>';
+			// } else {
+			// 	htmlContent += '<div class="clearfix visible-sm"></div>';
+			// }
+			$('#list-of-places').append(htmlContent);
+		};
+	}
+);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38496412-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

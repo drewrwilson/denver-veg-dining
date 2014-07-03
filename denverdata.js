@@ -1,0 +1,1468 @@
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+ 	
+   var myPointsOld = [      
+         
+         {
+            "type": "Feature",
+            "id":"City O\u2019 City",
+            "properties":{
+               "Name":"City O\u2019 City",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"206 E 13th Ave, Denver, CO 80203",
+               "Commentary":"tofu, tofu, tofu, Daiya cheese, a homemade cheese, seitan\u2026 Try the savory waffle.",
+               "long":-104.9844563,
+               "lat":39.7366794
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9844563,
+                  39.7366794
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Watercourse",
+            "properties":{
+               "Name":"Watercourse",
+               "":"",
+               "Phone":"(303) 832-7313",
+               "Link":"www.watercoursefoods.com",
+               "Address":" 837 E 17th Ave, Denver, CO 80203",
+               "Commentary":"The first vegetarian place in town, perhaps. Still a great menu.",
+               "long":-104.9766214,
+               "lat":39.743703
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9766214,
+                  39.743703
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Billy\u2019s Gourmet Hotdogs",
+            "properties":{
+               "Name":"Billy\u2019s Gourmet Hotdogs",
+               "":"",
+               "Phone":"",
+               "Link":"billysgourmethotdogs.com",
+               "Address":"600 E Colfax Ave Denver, CO 80203",
+               "Commentary":"vegan dog that is likely Lightlife. Two locations",
+               "long":-104.979194,
+               "lat":39.73944059999999
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.979194,
+                  39.73944059999999
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"BD\u0027s Mongolian BBQ",
+            "properties":{
+               "Name":"BD\u0027s Mongolian BBQ",
+               "":"",
+               "Phone":"",
+               "Link":"http://www.gomongo.com/",
+               "Address":"1620 Wazee Street, Denver, CO 80202 ",
+               "Commentary":"carries Gardein products.",
+               "long":-104.999441,
+               "lat":39.7513982
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.999441,
+                  39.7513982
+               ]
+            }
+         },
+         
+         {
+            "type": "Feature",
+            "id":"Hops and Pie",
+            "properties":{
+               "Name":"Hops and Pie",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3920 Tennyson St, Denver, CO 80212",
+               "Commentary":"vegan pizza options (including cheeses).",
+               "long":-105.0439598,
+               "lat":39.7713831
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0439598,
+                  39.7713831
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+
+            "type": "Feature",
+            "id":"Black Eye Coffee",
+            "properties":{
+               "Name":"Black Eye Coffee",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"Navajo Street \u0026 34th Avenue, Denver, CO ",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-105.0041219,
+               "lat":39.7644353
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0041219,
+                  39.7644353
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Coffee at the Point ",
+            "properties":{
+               "Name":"Coffee at the Point ",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"26th Avenue \u0026 Washington Street, Denver, CO",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-104.9781131,
+               "lat":39.7545992
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9781131,
+                  39.7545992
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Denver Bicycle Cafe",
+            "properties":{
+               "Name":"Denver Bicycle Cafe",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"17th Avenue \u0026 Lafayette Street, Denver, CO",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-104.9709268,
+               "lat":39.74325779999999
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9709268,
+                  39.74325779999999
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Fluid Coffee Bar ",
+            "properties":{
+               "Name":"Fluid Coffee Bar ",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"19th Avenue \u0026 Pennsylvania Street, Denver, CO",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-104.9810859,
+               "lat":39.74618359999999
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9810859,
+                  39.74618359999999
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Pablo\u2019s",
+            "properties":{
+               "Name":"Pablo\u2019s",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"6th Avenue \u0026 Washington Street , Denver, CO",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-104.9787878,
+               "lat":39.7256287
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9787878,
+                  39.7256287
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Pablo\u2019s",
+            "properties":{
+               "Name":"Pablo\u2019s",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"13th Avenue and Pennsylvania Street, Denver, CO",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-104.9810844,
+               "lat":39.7368847
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9810844,
+                  39.7368847
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Sweet Action Ice Cream ",
+            "properties":{
+               "Name":"Sweet Action Ice Cream ",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"Broadway \u0026 Ellsworth Avenue, Denver, CO",
+               "Commentary":"Always has 2 vegan ice cream options. Also has Beetbox vegan baked goods",
+               "long":-104.98748,
+               "lat":39.71657829999999
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.98748,
+                  39.71657829999999
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Wash Perk ",
+            "properties":{
+               "Name":"Wash Perk ",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"Ohio Avenue \u0026 Emerson Street , Denver, CO",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-104.9769294,
+               "lat":39.7020546
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9769294,
+                  39.7020546
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Weathervane Cafe ",
+            "properties":{
+               "Name":"Weathervane Cafe ",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"17th Avenue \u0026 Williams Street, Denver, CO",
+               "Commentary":"has Beetbox vegan baked goods",
+               "long":-104.9659811,
+               "lat":39.7432462
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9659811,
+                  39.7432462
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Biker Jim\u2019s",
+            "properties":{
+               "Name":"Biker Jim\u2019s",
+               "":"",
+               "Phone":"(720) 746-9355",
+               "Link":"bikerjimsdogs.com/\u200e",
+               "Address":"2148 Larimer St, Denver, CO 80205",
+               "Commentary":"two house-made vegan hotdogs. I have yet to ask, but I\u2019m pretty sure they\u2019re bean-based, which if true would be awesome.",
+               "long":-104.9901579,
+               "lat":39.754439
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9901579,
+                  39.754439
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Billy\u2019s Gourmet Hotdogs",
+            "properties":{
+               "Name":"Billy\u2019s Gourmet Hotdogs",
+               "":"",
+               "Phone":"",
+               "Link":"billysgourmethotdogs.com",
+               "Address":"2445 Larimer St Denver, CO 80205",
+               "Commentary":"vegan dog that is likely Lightlife. Two locations",
+               "long":-104.9869303,
+               "lat":39.7573353
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9869303,
+                  39.7573353
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Bombay Bowl",
+            "properties":{
+               "Name":"Bombay Bowl",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"575 Lincoln St, Denver, CO 80203",
+               "Commentary":"vegan-friendly and allergen-friendly. (Indian, fast food.)",
+               "long":-104.9862614,
+               "lat":39.7255578
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9862614,
+                  39.7255578
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Bombay Clay Oven",
+            "properties":{
+               "Name":"Bombay Clay Oven",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"165 Steele St, Denver, CO 80206",
+               "Commentary":"lists many items as dairy-free, which typically means vegan. Just ask. Cherry Creek.",
+               "long":-104.950154,
+               "lat":39.718974
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.950154,
+                  39.718974
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Crema",
+            "properties":{
+               "Name":"Crema",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"2862 Larimer St, Denver, CO 80205",
+               "Commentary":"Coffee shop that has something vegan other than soymilk ",
+               "long":-104.9816249,
+               "lat":39.761032
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9816249,
+                  39.761032
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Dazbog",
+            "properties":{
+               "Name":"Dazbog",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"501 W 12th Ave, Denver, CO 80204",
+               "Commentary":"Coffee shop that has something vegan other than soymilk ",
+               "long":-104.994368,
+               "lat":39.735489
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.994368,
+                  39.735489
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Dazbog",
+            "properties":{
+               "Name":"Dazbog",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1090 Yuma St, Denver, CO 80204",
+               "Commentary":"Coffee shop that has something vegan other than soymilk ",
+               "long":-105.014799,
+               "lat":39.73352999999999
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.014799,
+                  39.73352999999999
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Dazbog",
+            "properties":{
+               "Name":"Dazbog",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"890 Auraria Pkwy, Denver, CO 80202",
+               "Commentary":"Coffee shop that has something vegan other than soymilk ",
+               "long":-105.0028223,
+               "lat":39.7488255
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0028223,
+                  39.7488255
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"The Curtis Club",
+            "properties":{
+               "Name":"The Curtis Club",
+               "":"",
+               "Phone":"",
+               "Link":"http://www.thecurtisclub.com",
+               "Address":"2100 Curtis St, Denver, CO 80205",
+               "Commentary":"just opened\u2014at their soft opening, they said they would have many options for veg folks.",
+               "long":-104.9887265,
+               "lat":39.75187390000001
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9887265,
+                  39.75187390000001
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Eden",
+            "properties":{
+               "Name":"Eden",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3090 Downing St. Denver, CO 80205",
+               "Commentary":"super gay-friendly, veg-friendly place with Beyond Meat, tofu, vegan salad dressings and more. Awesome menu. Closed for remodeling as of 12/1/13.",
+               "long":-104.9728925,
+               "lat":39.7605162
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9728925,
+                  39.7605162
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Garbanzo\u2019s",
+            "properties":{
+               "Name":"Garbanzo\u2019s",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3453 W 32nd Ave, Denver, CO 80211",
+               "Commentary":"has \u201cvegan\u201d all over the menu.",
+               "long":-105.03384,
+               "lat":39.762364
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.03384,
+                  39.762364
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Hapa Sushi",
+            "properties":{
+               "Name":"Hapa Sushi",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"2780 E 2nd Ave, Denver, CO 80206",
+               "Commentary":"probably wins the award for being the most friendly sushi joint, but most have options. Update: see Sushi Sasa.",
+               "long":-104.9548061,
+               "lat":39.7193869
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9548061,
+                  39.7193869
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Hung Phat grocery",
+            "properties":{
+               "Name":"Hung Phat grocery",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1001 S Federal Blvd, Denver, CO 80219",
+               "Commentary":"extensive selection of frozen mock meats",
+               "long":-105.0255899,
+               "lat":39.698374
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0255899,
+                  39.698374
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Imperial Chinese",
+            "properties":{
+               "Name":"Imperial Chinese",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"431 S Broadway, Denver, CO 80209",
+               "Commentary":"mock meats, some of them vegan.",
+               "long":-104.988015,
+               "lat":39.709067
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.988015,
+                  39.709067
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Jonesy\u2019s",
+            "properties":{
+               "Name":"Jonesy\u2019s",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"400 E 20th Ave, Denver, CO 80205",
+               "Commentary":"evolving veg menu. Lots of non-processed options",
+               "long":-104.981983,
+               "lat":39.747358
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.981983,
+                  39.747358
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Karma",
+            "properties":{
+               "Name":"Karma",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"22 S Broadway, Denver, CO 80209",
+               "Commentary":"good vegan options. Love their seaweed salads, spicy edamame, and Tom Yum soup. They say they fry their tofu with cornstarch and not egg.",
+               "long":-104.98724,
+               "lat":39.716119
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.98724,
+                  39.716119
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Little Dragon",
+            "properties":{
+               "Name":"Little Dragon",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1305 Krameria St, Denver, CO 80220",
+               "Commentary":"Asian-fusion place with organic tofu\u2014has \"vegetarian eel,\" which is a non-processed mushroom dish that\u0027ll blow your mind",
+               "long":-104.9164644,
+               "lat":39.7369604
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9164644,
+                  39.7369604
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Linger",
+            "properties":{
+               "Name":"Linger",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"2030 W 30th Ave, Denver, CO 80211",
+               "Commentary":"great place for a fancy date night. Lots of non-processed options. Menu options are labeled vegan, gluten-free, and nut-free.",
+               "long":-105.0113582,
+               "lat":39.7594564
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0113582,
+                  39.7594564
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Marquis Pizza",
+            "properties":{
+               "Name":"Marquis Pizza",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":" 2009 Larimer St, Denver, CO 80205",
+               "Commentary":"good thin-crust pizza, Daiya cheese, and mock meats from Denver Seitan Company.",
+               "long":-104.992521,
+               "lat":39.753375
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.992521,
+                  39.753375
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Masala",
+            "properties":{
+               "Name":"Masala",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3140 S Parker Rd #7, Aurora, CO 80014",
+               "Commentary":"all vegetarian Indian restaurant in Aurora. I hear good things.",
+               "long":-104.8484364,
+               "lat":39.6599175
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.8484364,
+                  39.6599175
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Mellow Mushroom",
+            "properties":{
+               "Name":"Mellow Mushroom",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1201 16th Street Mall, Denver, CO 80202",
+               "Commentary":"Street Mall has tempeh sandwiches and pizzas with Daiya cheese and tofu/tempeh toppings. Expensive but good.",
+               "long":-104.9971519,
+               "lat":39.7492221
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9971519,
+                  39.7492221
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Moe\u0027s BBQ",
+            "properties":{
+               "Name":"Moe\u0027s BBQ",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"530 Broadway, Denver, CO 80203",
+               "Commentary":"damn satisfying BBQ tofu sandwich (if you get two), vegan coleslaw, and potato salad. Update: can they make anything vegan? They couldn\u2019t yesterday. 12/1/13.",
+               "long":-104.98711,
+               "lat":39.7246359
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.98711,
+                  39.7246359
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Mercury Cafe",
+            "properties":{
+               "Name":"Mercury Cafe",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"2199 California St, Denver, CO 80205",
+               "Commentary":"always has old-school hippie options, including unseasoned tofu, tempeh, and quinoa.",
+               "long":-104.9851197,
+               "lat":39.7507419
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9851197,
+                  39.7507419
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Nooch Vegan Market",
+            "properties":{
+               "Name":"Nooch Vegan Market",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3360 Larimer St, Denver, CO 80205",
+               "Commentary":"Need I say more?",
+               "long":-104.9758246,
+               "lat":39.765902
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9758246,
+                  39.765902
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Native Foods",
+            "properties":{
+               "Name":"Native Foods",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"680 S Colorado Boulevard, Glendale, CO 80246",
+               "Commentary":"100% vegan restaurant\u2014just opened in late October",
+               "long":-104.9405947,
+               "lat":39.7043591
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9405947,
+                  39.7043591
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Park Burger",
+            "properties":{
+               "Name":"Park Burger",
+               "":"",
+               "Phone":"(720) 242-9951",
+               "Link":"",
+               "Address":"1890 S Pearl Street, Denver, CO 80210",
+               "Commentary":"house-made vegan burger",
+               "long":-104.9804787,
+               "lat":39.6823445
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9804787,
+                  39.6823445
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Parallel 17",
+            "properties":{
+               "Name":"Parallel 17",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":" 17th \u0026 Franklin, Denver, CO",
+               "Commentary":"can do vegan pho and has other menu items",
+               "long":-104.9684441,
+               "lat":39.7432466
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9684441,
+                  39.7432466
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Parsley",
+            "properties":{
+               "Name":"Parsley",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"303 W 11th Ave, Denver, CO 80204",
+               "Commentary":"fresh juice (possibly some sandwiches/items) in the Golden Triangle.",
+               "long":-104.9918196,
+               "lat":39.7337136
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9918196,
+                  39.7337136
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Pho on 6th",
+            "properties":{
+               "Name":"Pho on 6th",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1312 E 6th Ave, Denver, CO 80218",
+               "Commentary":"",
+               "long":-104.9711308,
+               "lat":39.7255691
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9711308,
+                  39.7255691
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Pho Duy on Federal",
+            "properties":{
+               "Name":"Pho Duy on Federal",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"945 S Federal Blvd, Denver, CO 80219",
+               "Commentary":"the best (vegan) pho I\u2019ve ever had. Cheap for what you get.",
+               "long":-105.0255138,
+               "lat":39.699516
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0255138,
+                  39.699516
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Pho-natic",
+            "properties":{
+               "Name":"Pho-natic",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"229 E Colfax Ave, Denver, CO 80203",
+               "Commentary":"unconfirmed: has vegan options",
+               "long":-104.9840807,
+               "lat":39.7402029
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9840807,
+                  39.7402029
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Pizza Fusion",
+            "properties":{
+               "Name":"Pizza Fusion",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"571 E Colfax Ave, Denver, CO 80203",
+               "Commentary":"Gardein products, Daiya cheese, and Follow Your Heart cheese. Organic company.",
+               "long":-104.9800942,
+               "lat":39.74011369999999
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9800942,
+                  39.74011369999999
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"The Populist",
+            "properties":{
+               "Name":"The Populist",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3163 Larimer St, Denver, CO 80205",
+               "Commentary":"new joint on Larimer that has jackfruit.",
+               "long":-104.97848,
+               "lat":39.764238
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.97848,
+                  39.764238
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"The Rebellion",
+            "properties":{
+               "Name":"The Rebellion",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"2231 S Broadway, Denver, CO 80210",
+               "Commentary":"many fake cheeses and meats for sandwiches, pizzas, vegan wings\u2026",
+               "long":-104.9878079,
+               "lat":39.6762549
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9878079,
+                  39.6762549
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Root Down",
+            "properties":{
+               "Name":"Root Down",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1600 W 33rd Ave, Denver, CO 80211",
+               "Commentary":"(same owners as Linger) is another HiLo date night place.",
+               "long":-105.0056028,
+               "lat":39.7630808
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0056028,
+                  39.7630808
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Sexy Pizza",
+            "properties":{
+               "Name":"Sexy Pizza",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1018 E 11th Ave, Denver, CO 80218",
+               "Commentary":"located by the Cap. Hill Whole Foods has Daiya.",
+               "long":-104.9750828,
+               "lat":39.7336784
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9750828,
+                  39.7336784
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Side Wok Cafe",
+            "properties":{
+               "Name":"Side Wok Cafe",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"4930 W Colfax Ave, Denver, CO 80204",
+               "Commentary":"mock-beef, chicken, and shrimp.",
+               "long":-105.050654,
+               "lat":39.740043
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.050654,
+                  39.740043
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Sputnik",
+            "properties":{
+               "Name":"Sputnik",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3 S Broadway, Denver, CO 80209",
+               "Commentary":"greasy sandwiches, including jackfruit and vegan ham sammies, and deep-fried concoctions galore. Menu updated and all brunch items are vegan optional.",
+               "long":-104.9874991,
+               "lat":39.7164108
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9874991,
+                  39.7164108
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Steve\u2019s Snappin\u2019 Dogs",
+            "properties":{
+               "Name":"Steve\u2019s Snappin\u2019 Dogs",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"3525 E Colfax Ave, Denver, CO 80206",
+               "Commentary":"has a vegan dog",
+               "long":-104.9456639,
+               "lat":39.740381
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9456639,
+                  39.740381
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Sub Culture",
+            "properties":{
+               "Name":"Sub Culture",
+               "":"",
+               "Phone":"",
+               "Link":"",
+               "Address":"1300 Pennsylvania St, Denver, CO 80203",
+               "Commentary":"several tempeh sammies, Daiya, vegan cream cheese/mayo/thousand island...",
+               "long":-104.980726,
+               "lat":39.737086
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.980726,
+                  39.737086
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Sushi Sasa",
+            "properties":{
+               "Name":"Sushi Sasa",
+               "":"",
+               "Phone":"(303) 433-7272",
+               "Link":"sushisasa.com",
+               "Address":"2401 15th St #80, Denver, CO 80202",
+               "Commentary":"located near I-25 has \u201cvegan\u201d all over the menu, including vegan tempura.",
+               "long":-105.0091011,
+               "lat":39.7567655
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0091011,
+                  39.7567655
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Swing Thai",
+            "properties":{
+               "Name":"Swing Thai",
+               "":"",
+               "Phone":"",
+               "Link":"www.swingthai.com",
+               "Address":"845 Colorado Blvd Denver, CO 80206",
+               "Commentary":"\u201cvegan\u201d all over the menu.",
+               "long":-104.9411151,
+               "lat":39.7298923
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9411151,
+                  39.7298923
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Swing Thai",
+            "properties":{
+               "Name":"Swing Thai",
+               "":"",
+               "Phone":"",
+               "Link":"www.swingthai.com",
+               "Address":"301 S Pennsylvania St, Denver, CO 80209",
+               "Commentary":"\u201cvegan\u201d all over the menu.",
+               "long":-104.981851,
+               "lat":39.710972
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.981851,
+                  39.710972
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Swing Thai",
+            "properties":{
+               "Name":"Swing Thai",
+               "":"",
+               "Phone":"",
+               "Link":"www.swingthai.com",
+               "Address":"4370 Tennyson St, Denver, Colorado 80212",
+               "Commentary":"\u201cvegan\u201d all over the menu.",
+               "long":-105.0437592,
+               "lat":39.7762543
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0437592,
+                  39.7762543
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Tarasco\u0027s Mexican Restaurant",
+            "properties":{
+               "Name":"Tarasco\u0027s Mexican Restaurant",
+               "":"",
+               "Phone":"(303) 922-2387",
+               "Link":"https://plus.google.com/101325852347117441632/posts",
+               "Address":"470 S Federal Blvd, Denver, CO 80219",
+               "Commentary":"veg menu\u2014everything available vegan. Their extensive juice menu is amazeballs.",
+               "long":-105.0246273,
+               "lat":39.7079436
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0246273,
+                  39.7079436
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"True Food",
+            "properties":{
+               "Name":"True Food",
+               "":"",
+               "Phone":"(720) 509-7661",
+               "Link":"www.truefoodkitchen.com",
+               "Address":"2800 E 2nd Ave #101, Denver, CO 80206",
+               "Commentary":"tempeh sandwich, salads, and soups.",
+               "long":-104.9540686,
+               "lat":39.7192488
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9540686,
+                  39.7192488
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Udi\u0027s",
+            "properties":{
+               "Name":"Udi\u0027s",
+               "":"",
+               "Phone":"(303) 329-8888",
+               "Link":"udisfood.com",
+               "Address":"7357 E 29th Avenue, Denver, CO 80238",
+               "Commentary":"Located next to the Colfax Tattered Cover has a falafel burger, mushroom flatbread, soup, two pizzas...",
+               "long":-104.9020098,
+               "lat":39.7581673
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9020098,
+                  39.7581673
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Uncle",
+            "properties":{
+               "Name":"Uncle",
+               "":"",
+               "Phone":"(303) 433-3263",
+               "Link":"uncledenver.tumblr.com",
+               "Address":"2215 W 32nd Ave, Denver, CO 80211",
+               "Commentary":"noodle bar with many veg options, including vegan ramen.",
+               "long":-105.0133196,
+               "lat":39.7620392
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0133196,
+                  39.7620392
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Waffleganger",
+            "properties":{
+               "Name":"Waffleganger",
+               "":"",
+               "Phone":"(720) 515-0014",
+               "Link":"waffleganger.com",
+               "Address":"Denver, CO 80212",
+               "Commentary":"another vegan food truck that sells sweet and savory waffle sandwiches.",
+               "long":-105.0498966,
+               "lat":39.7752563
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0498966,
+                  39.7752563
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Weathervane",
+            "properties":{
+               "Name":"Weathervane",
+               "":"",
+               "Phone":"(303) 355-5863",
+               "Link":"http://www.weathervanecafe.com/",
+               "Address":"1725 E 17th Ave, Denver, CO 80218",
+               "Commentary":"tempeh sandwich, burritos, wraps, and donuts.",
+               "long":-104.9665063,
+               "lat":39.7434372
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9665063,
+                  39.7434372
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Yak and Yeti",
+            "properties":{
+               "Name":"Yak and Yeti",
+               "":"",
+               "Phone":"",
+               "Link":"http://www.theyakandyeti.com/",
+               "Address":"7803 Ralston Rd Arvada, CO 80002",
+               "Commentary":"vegan Indian menu avail",
+               "long":-105.0842162,
+               "lat":39.8020158
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -105.0842162,
+                  39.8020158
+               ]
+            }
+         },
+         {
+            "type": "Feature",
+            "id":"Yard House",
+            "properties":{
+               "Name":"Yard House",
+               "":"",
+               "Phone":"(303) 572-9273",
+               "Link":"www.yardhouse.com/co/denver-restaurant",
+               "Address":"1555 Court Pl, Denver, CO 80202",
+               "Commentary":"carries Gardein products.",
+               "long":-104.9892129,
+               "lat":39.7421053
+            },
+            "type":"Feature",
+            "geometry":{
+               "type":"Point",
+               "coordinates":[
+                  -104.9892129,
+                  39.7421053
+               ]
+            }
+      }
+ 	];
